@@ -9,7 +9,7 @@ Este projeto tem como objetivo criar e automatizar cenários de teste para a pá
 Durante o desenvolvimento, os seguintes cenários de teste foram criados para cobrir possíveis interações de um usuário na página de login:
 
 **1. Login com Credenciais Válidas**
-  - Verifica se o usuário é redirecionado corretamente para a página da conta ao fornecer credenciais válidas.
+  - Verifica se o usuário é redirecionado corretamente para a página da conta ao fornecer credenciais válidas. Obs: Usuário criado previamente.
 
 **2. Tentativa de Login com Senha Incorreta**
   - Verifica se uma mensagem de erro é exibida quando a senha está incorreta.
@@ -44,6 +44,10 @@ Durante o desenvolvimento, os seguintes cenários de teste foram criados para co
 git clone https://github.com/DrumondGit/dti-qa.git
 ```
 **2. Instale as dependências:**
+  - Acesse o diretório raíz do projeto (caso não esteja):
+```
+cd dti-qa
+```
   - No diretório raiz do projeto, execute:
 ```
 npm install
@@ -53,7 +57,16 @@ npm install
 ```
 npx cypress open
 ```
-Isso abrirá a interface do Cypress. Escolha o arquivo de teste e clique para executá-lo.
+Isso abrirá a interface do Cypress:
+- Selecione E2E Testing
+- Selecione o browser (Chrome `v130`)
+- Clique na opção **Start E2E Testing in Chrome**
+- Por fim, acesse o arquivo `login_spec.cy.js` e execute os testes.
+
+Em caso de erro execute o comando para instalar o Cypress diretamente, para garantir que foi instalado corretamente:
+```
+npx cypress install
+```
 
 **4. Executar no modo Headless (opcional):**
 Para executar os testes sem abrir a interface do Cypress:
