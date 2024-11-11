@@ -33,6 +33,7 @@ Durante o desenvolvimento, os seguintes cenários de teste foram criados para co
   
 ## Pré-requisitos
 - [Visual Studio Code](https://code.visualstudio.com/download) instalado.
+- [Git](https://git-scm.com/downloads) instalado.
 - [Node.js](https://nodejs.org/en/download/package-manager) `v18.15.0` (versão utilizada no projeto) instalado.
 - Extensão Cypress Snippets `v1.2.0` instalada (pesquisar por Cypress Snippets em extensões no VS Code)
 
@@ -57,16 +58,17 @@ npm install
 ```
 npx cypress open
 ```
+Em caso de erro, execute o comando abaixo para instalar o Cypress diretamente, assegurando que a instalação seja realizada corretamente. Após a conclusão, execute novamente o comando anterior.
+```
+npx cypress install
+```
 Isso abrirá a interface do Cypress:
 - Selecione E2E Testing
 - Selecione o browser (Chrome `v130`)
 - Clique na opção **Start E2E Testing in Chrome**
 - Por fim, acesse o arquivo `login_spec.cy.js` e execute os testes.
 
-Em caso de erro execute o comando para instalar o Cypress diretamente, para garantir que foi instalado corretamente:
-```
-npx cypress install
-```
+
 
 **4. Executar no modo Headless (opcional):**
 Para executar os testes sem abrir a interface do Cypress:
